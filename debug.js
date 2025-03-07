@@ -1,7 +1,7 @@
-console.log("Begin"); 
-setTimeout(() => { console.log("Timeout Task"); }, 10);
-Promise.resolve().then(() => { console.log("Promise Task"); }); 
-console.log("End");
+console.log("Begin")
+setTimeout(() => { console.log("Timeout Task"); }, 0)
+Promise.resolve().then(() => { console.log("Promise Task"); })
+console.log("End")
 // Output of above code should be following sequence
 //Begin
 // End

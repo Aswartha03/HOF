@@ -1,7 +1,14 @@
 function timer(seconds,duration=100){
+    
     let time = seconds
+    let v=0
     let id= setInterval(()=>{
-      if(time>0){
+      if(v==1){
+        clearInterval(id)
+        console.log("Completed whith char")
+        return 
+      }
+      else if(time>0){
       console.log("Present time is: "+time+" seconds and Remainig time is: "+ (time-1)+" seconds")
         
       }
@@ -11,6 +18,28 @@ function timer(seconds,duration=100){
           console.log("Countdown complete!")
       }
       time-=1
-    },duration )
+    },duration)
+    setTimeout(()=>{
+      stopwithchar("c")
+    },200)
+    // let v=0
+    function stopwithchar(s){
+      // let id=setTimeout(()=>{
+        let str="abcdefghijklmnopqrstuvwxyz"
+        if(str.includes(s)){
+          // clearTimeout(id)
+            // console.log("Stop")
+            v=1
+        }         
+  }
+  
+// }, 2000)
+  
   }
   timer(10)
+// }/
+
+
+// setTimeout(()=>{
+//   stopwithchar("c")
+// },2000)
